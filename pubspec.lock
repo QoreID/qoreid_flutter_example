@@ -135,10 +135,10 @@ packages:
     dependency: "direct main"
     description:
       name: qoreidsdk
-      sha256: "9a0b86e3c0eeebb2cce55a00ff5086dd405685c188f0a50440bc2d570075cc02"
+      sha256: "084341fa9b7de766a04c8173af8bb2e64f66a9d4cf93cf3f01cef1eaec3cfc7d"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.3"
+    version: "1.0.4"
   sky_engine:
     dependency: transitive
     description: flutter
