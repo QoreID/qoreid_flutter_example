@@ -44,6 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _launchQoreid() async {
+    // POSSIBLE DATA FORMATE
+    /**
+
+
+
+    **/
+    
     // Launch Qoreid app
     QoreidData data = QoreidData(
         clientId: "PNQPGQCONMC80MOPAYUW", //required
