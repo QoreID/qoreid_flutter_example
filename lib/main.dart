@@ -44,12 +44,36 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _launchQoreid() async {
-    // POSSIBLE DATA FORMATE
-    /**
+    
+   
+  /**
+    * POSSIBLE DATA FORMAT
+      Map<String, dynamic> formData = {
+          "addressData": {
+            "address": "",
+            "city": "",
+            "lga": "",
+          },
+          "applicantData": {
+            "email": "",
+            "firstName": "Emma",
+            "gender": "",
+            "lastName": "Emmanuel",
+            "middleName": "",
+            "phoneNumber": "08023902309",
+          },
+          "clientId": "",
+          "customerReference": "",
+          "flowId": 0,
+          "identityData": {
+            "idNumber": "",
+            "idType": "",
+          },
+          "ocrAcceptedDocuments": "",
+          "productCode": "",
+      };
 
-
-
-    **/
+   */
     
     // Launch Qoreid app
     QoreidData data = QoreidData(
