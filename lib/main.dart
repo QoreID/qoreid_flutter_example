@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             "gender": "",
             "lastName": "Emmanuel",
             "middleName": "",
-            "phoneNumber": "08023902309",
+            "phoneNumber": "08012345678",
           },
           "clientId": "",
           "customerReference": "",
@@ -77,14 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
     
     // Launch Qoreid app
     QoreidData data = QoreidData(
-        clientId: "PNQPGQCONMC80MOPAYUW", //required
-        flowId: 577,
-        customerReference: "cus-ref", //required
-        productCode: "", //required required for collection
+        clientId: "{{CLIENT_ID}}", //required
+        flowId: 0,
+        customerReference: "{{CUSTOMER_REF}}", //required
+        productCode: "{{PRODUCT_CODE}}", //required required for collection
         addressData: {},
         applicantData: {},
-        ocrAcceptedDocuments: "",
-        identityData: {});
+        ocrAcceptedDocuments: "DRIVERS_LICENSE_NGA", // comma separated doc types
+        identityData: {}); 
     await Qoreidsdk.launchQoreid(data);
   }
 
