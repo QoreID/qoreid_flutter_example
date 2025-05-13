@@ -2,7 +2,7 @@
 import UIKit
 import Flutter
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
     var navigationController: UINavigationController!
        
