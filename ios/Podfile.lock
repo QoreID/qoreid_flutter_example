@@ -1,11 +1,11 @@
 PODS:
   - Flutter (1.0.0)
-  - QoreIDSDK (1.0.0):
-    - QoreIDSDKDependencies
   - qoreidsdk (1.0.11):
     - Flutter
     - QoreIDSDK
-  - QoreIDSDKDependencies (1.0.0)
+  - QoreIDSDK (1.0.6):
+    - QoreIDSDKDependencies
+  - QoreIDSDKDependencies (1.0.4)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -24,9 +24,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  QoreIDSDK: 14c37610c33daaf3244d0c1153b917e78b1a213f
+  QoreIDSDK: ad55fdc516b7ed9eb425776b682fb81727daada1
   qoreidsdk: 819676c69e35c561f5c3d43fe3b915e269dd3f22
-  QoreIDSDKDependencies: bbf5a9654072cc36d237ddef5523f011d0b91d4e
+  QoreIDSDKDependencies: 475a8a7b79fc60ac194d1d83295b65fc038e28c1
 
 PODFILE CHECKSUM: 5a2ad402fd87d35f0ef988c17501a59ea4014e9c
 

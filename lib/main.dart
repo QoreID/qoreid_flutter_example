@@ -44,9 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _launchQoreid() async {
-    
-   
-  /**
+    /**
     * POSSIBLE DATA FORMAT
       Map<String, dynamic> formData = {
           "addressData": {
@@ -74,25 +72,21 @@ class _MyHomePageState extends State<MyHomePage> {
       };
 
    */
-    /**
-     * QoreidData(
-        clientId: "PNQPGQCONMC80MOPAYUW", //required
-        flowId: 577,
-        customerReference: "cus-ref", //required
-        productCode: "", //required required for collection
-        addressData: {},
-        applicantData: {},
-        ocrAcceptedDocuments: "DRIVERS_LICENSE_NGA", // comma separated doc types
-        identityData: {});
-     */
     
+
     // Launch Qoreid app
-    QoreidData data =  QoreidData(
-        clientId: "PNQPGQCONMC80MOPAYUW", //required
-        flowId: 577,
-        customerReference: "cus-ref", //required
-        productCode: "", //required required for collection
-        addressData: {},
+    QoreidData data = QoreidData(
+        clientId: "", //required
+        flowId: 0,
+        customerReference: "cus-5ef-06", //required
+        productCode: "bvn_boolean", //required required for collection
+        addressData: {
+          "state": "Lagos",
+          "lga": "Ikeja",
+          "city": "Ikeja",
+          "country": "Nigeria",
+          "address": "Alen Adeleye Street, Ikeja",
+        },
         applicantData: {
           "email": "emmanuel@gmail.com",
           "firstName": "John",
@@ -101,8 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
           "middleName": "",
           "phoneNumber": "+2348012345678",
         },
-        ocrAcceptedDocuments: "DRIVERS_LICENSE_NGA", // comma separated doc types
-        identityData: {});
+        ocrAcceptedDocuments:
+            "DRIVERS_LICENSE_NGA", // comma separated doc types
+        identityData: {"idNumber": "02939300303", "idType": "bvn"});
     await Qoreidsdk.launchQoreid(data);
   }
 
