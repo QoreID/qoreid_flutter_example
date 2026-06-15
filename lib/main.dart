@@ -60,9 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             "middleName": "",
             "phoneNumber": "08012345678",
           },
-          "clientId": "",
-          "customerReference": "",
-          "flowId": 0,
+          "sessionToken": "",
           "identityData": {
             "idNumber": "",
             "idType": "",
@@ -72,32 +70,31 @@ class _MyHomePageState extends State<MyHomePage> {
       };
 
    */
-    
 
     // Launch Qoreid app
     QoreidData data = QoreidData(
-        clientId: "", //required
-        flowId: 0,
-        customerReference: "cus-5ef-06", //required
-        productCode: "bvn_boolean", //required required for collection
+        sessionToken: "",
         addressData: {
           "state": "Lagos",
-          "lga": "Ikeja",
-          "city": "Ikeja",
+          "lga": "",
+          "city": "Lekki",
           "country": "Nigeria",
-          "address": "Alen Adeleye Street, Ikeja",
+          "address": "",
         },
         applicantData: {
-          "email": "emmanuel@gmail.com",
-          "firstName": "John",
+          "email": "example@gmail.com",
+          "firstName": "Bunch",
           "gender": "",
-          "lastName": "Doe",
+          "lastName": "Dillon",
           "middleName": "",
-          "phoneNumber": "+2348012345678",
+          "phoneNumber": "+23480123456789",
         },
         ocrAcceptedDocuments:
-            "DRIVERS_LICENSE_NGA", // comma separated doc types
-        identityData: {"idNumber": "02939300303", "idType": "bvn"});
+            "DRIVERS_LICENSE_NGA,NIN_SLIP_NGA,PASSPORT_NGA", // comma separated doc types
+        identityData: {
+          "idNumber": "95888168924", 
+          "idType": "bvn" //"nin"
+        });
     await Qoreidsdk.launchQoreid(data);
   }
 

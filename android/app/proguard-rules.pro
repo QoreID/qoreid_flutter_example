@@ -11,6 +11,4 @@
 
 # QoreID
 -keep class com.qoreid.sdk.** { *; }
--dontshrink
 -dontobfuscate
--dontoptimize
