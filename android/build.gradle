@@ -1,8 +1,14 @@
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+    google()
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "https://repo.qoreid.com/repository/maven-releases/"
     }
+    maven { url 'https://jitpack.io' }
+  }
+
 }
 
 rootProject.buildDir = "../build"

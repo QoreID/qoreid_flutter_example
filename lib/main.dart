@@ -31,10 +31,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  late TextEditingController _sessionTokenController;
+
   @override
   void initState() {
     super.initState();
+    _sessionTokenController = TextEditingController();
     _qoreidsdkResult();
+  }
+
+  @override
+  void dispose() {
+    _sessionTokenController.dispose();
+    super.dispose();
   }
 
   void _qoreidsdkResult() async {
@@ -73,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // Launch Qoreid app
     QoreidData data = QoreidData(
-        sessionToken: "",
+        sessionToken: _sessionTokenController.text,
         addressData: {
           "state": "Lagos",
           "lga": "",
@@ -87,12 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
           "gender": "",
           "lastName": "Dillon",
           "middleName": "",
-          "phoneNumber": "+23480123456789",
+          "phoneNumber": "",
         },
         ocrAcceptedDocuments:
             "DRIVERS_LICENSE_NGA,NIN_SLIP_NGA,PASSPORT_NGA", // comma separated doc types
         identityData: {
-          "idNumber": "95888168924", 
+          "idNumber": "95888168924",
           "idType": "bvn" //"nin"
         });
     await Qoreidsdk.launchQoreid(data);
@@ -111,6 +120,20 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'Qoreidsdk Exampple',
+            ),
+            Container(
+              padding: const EdgeInsets.all(20.0),
+              width: double.infinity,
+              child: SizedBox(
+                height: 60,
+                child: TextField(
+                  controller: _sessionTokenController,
+                  decoration: const InputDecoration(
+                    labelText: 'Session Token',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
             ),
             Container(
               padding: const EdgeInsets.all(20.0),
