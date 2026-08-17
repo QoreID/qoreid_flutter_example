@@ -63,9 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           "applicantData": {
             "email": "",
-            "firstName": "Emma",
+            "firstName": "John",
             "gender": "",
-            "lastName": "Emmanuel",
+            "lastName": "Doe",
             "middleName": "",
             "phoneNumber": "08012345678",
           },
